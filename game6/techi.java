@@ -14,9 +14,17 @@ public class techi extends Actor
      */
     public void act()
     {
+
         if( Greenfoot.isKeyDown( "down" ) ){
         setRotation(90);
         move(1);
-}// Add your action code here.
+    }// Add your action code here.
+
+        // Add your action code here.
+        if( Greenfoot.isKeyDown( "up" ) ){
+        setRotation(-90);
+        move(1);
+        }   
+
     }
 }
