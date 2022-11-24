@@ -1,11 +1,20 @@
 #Greenfoot project file
+class.MyWorld.image=bg_school.jpg
 class.aaaa.image=bee2.png
 class.techi.image=woman01.png
+<<<<<<< HEAD
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=527
 editor.fx.0.y=232
 height=585
+=======
+editor.fx.0.height=735
+editor.fx.0.width=813
+editor.fx.0.x=380
+editor.fx.0.y=88
+height=631
+>>>>>>> 22f9b34d27a8092f35b6f8ef8b19a4f43ad76d8c
 package.numDependencies=0
 package.numTargets=4
 project.charset=UTF-8
@@ -51,7 +60,7 @@ target4.width=120
 target4.x=0
 target4.y=0
 version=3.0.0
-width=825
+width=1022
 world.lastInstantiated=MyWorld
-xPosition=408
-yPosition=216
+xPosition=202
+yPosition=148
