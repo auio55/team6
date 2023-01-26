@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int timecount = 1000;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -40,6 +40,12 @@ public class MyWorld extends World
     }
     public void act()
     {   showText( ""+point, 100, 50 );
+        timecount--;
+    showText( ""+timecount, 50, 430 );
+      if( timecount==0){
+        showText( "TIME OVER", 50, 430 );
+        //Greenfoot.stop();
+    } 
         if(mob<1)
         {
             switch((int)(Math.random()*((2)+1)))
@@ -57,3 +63,6 @@ public class MyWorld extends World
         }
     }
 }
+
+
+
