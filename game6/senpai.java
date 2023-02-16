@@ -19,6 +19,7 @@ public class senpai extends Actor
         if(actor1!=null||actor2!=null||isAtEdge()){
             getWorld().removeObject( this );
             MyWorld.mob--;
+            
             MyWorld.point++;
         }// Add your action code here.
         

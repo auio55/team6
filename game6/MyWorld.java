@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int timecount = 1000;
+    private int timecount = 3000;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -16,12 +16,15 @@ public class MyWorld extends World
     static public int mob=0;
     static public int point=0;
     public MyWorld()
-    {    
+    {   
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 450, 1); 
+        mob=0;
+        point=0;
         addObject( new NT(), 50, 350 );
         addObject( new TM(), 750, 350 );
-        addObject( new sensei(), 400, 350 );
+        addObject( new sensei(), 400, 380 );
         //addObject( new sensei2(), 300, 350 );
         
         for(int i=0;i<=1000;i+=50){
@@ -41,23 +44,40 @@ public class MyWorld extends World
     public void act()
     {   showText( ""+point, 100, 50 );
         timecount--;
-    showText( ""+timecount, 50, 430 );
-      if( timecount==0){
-        showText( "TIME OVER", 50, 430 );
-        //Greenfoot.stop();
-    } 
-        if(mob<1)
+        showText( ""+timecount, 50, 430 );
+        if( timecount<=0){
+            if(point<60)
+            {
+                showText( "留年", 50, 430 );
+            }
+            else
+            {
+                showText( "進級", 50, 430 );
+            }
+            
+            Greenfoot.stop();
+        } 
+        if(mob<2)
         {
-            switch((int)(Math.random()*((2)+1)))
+            switch((int)(Math.random()*((5)+1)))
             {
                 case 0:
-                    addObject( new senpai(), 200, 300 );
+                    addObject( new senpai(), 200, 380 );
                     break;
                 case 1:
-                   addObject( new senpai(), 300, 200 );
+                   addObject( new senpai(), 400, 220 );
+                   break;
+                case 2:
+                   addObject( new senpai(), 200, 220 );
+                   break;
+                case 3:
+                   addObject( new senpai(), 600, 380 );
+                   break;
+                case 4:
+                   addObject( new senpai(), 200, 60 );
                    break;
                 default:
-                    addObject( new senpai(), 400, 100 );
+                    addObject( new senpai(), 600, 60 );
             }
             mob++;
         }
